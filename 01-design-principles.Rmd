@@ -305,6 +305,14 @@ class: title title-1
 --
 
 .box-1.medium[Reframe the question]
+---
+
+class: title title-1, center
+
+# `r fontawesome::fa("laptop")` Application Exercise
+<br><br>
+
+.huge[[bit.ly/bem-392-s22-ae3](https://bit.ly/bem-392-s22-ae3)]
 
 ---
 
@@ -341,6 +349,14 @@ class: center
 <figure>
 <img src = "img/exhaustive.jpeg" width = '70%'> </img>
 </figure>
+---
+
+class: title title-1, center
+
+# `r fontawesome::fa("laptop")` Application Exercise
+<br><br>
+
+.huge[[bit.ly/bem-392-s22-ae3](https://bit.ly/bem-392-s22-ae3)]
 
 ---
 
@@ -427,6 +443,14 @@ class: title title-1
 --
 
 -  Such an analysis is acceptable here due to the strict pre-specification of the analysis and due to the standards and practices that the community has developed regarding the reporting of clinical trials
+---
+
+class: title title-1, center
+
+# `r fontawesome::fa("laptop")` Application Exercise
+<br><br>
+
+.huge[[bit.ly/bem-392-s22-ae3](https://bit.ly/bem-392-s22-ae3)]
 
 ---
 
@@ -476,6 +500,14 @@ class: title title-1
 --
 
 - Often, in studies where data are collected in the field, such as in people’s homes, field workers can relay important details about the circumstances under which the data were collected
+---
+
+class: title title-1, center
+
+# `r fontawesome::fa("laptop")` Application Exercise
+<br><br>
+
+.huge[[bit.ly/bem-392-s22-ae3](https://bit.ly/bem-392-s22-ae3)]
 
 ---
 
@@ -513,6 +545,14 @@ class: center
 <figure>
 <img src = "img/transparent-v2.jpeg" width = '70%'> </img>
 </figure>
+---
+
+class: title title-1, center
+
+# `r fontawesome::fa("laptop")` Application Exercise
+<br><br>
+
+.huge[[bit.ly/bem-392-s22-ae3](https://bit.ly/bem-392-s22-ae3)]
 
 ---
 
@@ -550,6 +590,14 @@ class: center
 <figure>
 <img src = "img/reproducible.jpeg" width = '70%'> </img>
 </figure>
+---
+
+class: title title-1, center
+
+# `r fontawesome::fa("laptop")` Application Exercise
+<br><br>
+
+.huge[[bit.ly/bem-392-s22-ae3](https://bit.ly/bem-392-s22-ae3)]
 
 ---
 

@@ -48,13 +48,25 @@ Lucy D'Agostino McGowan
 ]
 
 ---
-## `r emo::ji("wave")`
 
-##  Lucy D'Agostino McGowan
+class: title-inv-1
 
-<i class="fa fa-envelope"></i> &nbsp; [mcgowald@wfu.edu](mailto:mcgowald@wfu.edu) <br>
+
+# `r emo::ji("wave")` Lucy D'Agostino McGowan
+
+[mcgowald@wfu.edu](mailto:mcgowald@wfu.edu) <br>
 
 [lucymcgowan.com](https://lucymcgowan.com)
+
+---
+
+class: title title-1
+
+# Follow Along
+<br><br>
+.center[
+# [bit.ly/bem-392-s22-slides-1](https://bit.ly/bem-392-s22-slides-1)
+]
 ---
 
 class: title-inv-1 middle
@@ -203,6 +215,15 @@ class: title title-1
 
 ---
 
+class: title title-1, center
+
+# `r fontawesome::fa("laptop")` Application Exercise
+<br><br>
+
+.huge[[bit.ly/bem-392-s22-ae3](https://bit.ly/bem-392-s22-ae3)]
+
+---
+
 class: title title-1
 
 # Design Principles of Data Analysis
@@ -284,7 +305,6 @@ class: title title-1
 --
 
 .box-1.medium[Reframe the question]
-
 
 ---
 
@@ -542,3 +562,27 @@ class: title-1 title center
 </figure>
 
 ---
+
+class: title title-1, center
+
+# `r fontawesome::fa("laptop")` Application Exercise
+<br><br>
+
+.huge[[bit.ly/bem-392-s22-ae1](https://bit.ly/bem-392-s22-ae1)]
+
+---
+
+class: title title-1, center
+
+# `r fontawesome::fa("laptop")` Application Exercise
+<br><br>
+
+.huge[[bit.ly/bem-392-s22-ae2](https://bit.ly/bem-392-s22-ae2)]
+
+---
+
+class: title-inv-1 middle center
+
+# Part 3: Discuss with client and re-submit scores by end of February
+
+

@@ -1080,4 +1080,17 @@ Go to [bit.ly/bem-392-s22-rstudio](https://bit.ly/bem-392-s22-rstudio)
 ]
 ---
 
+# `r fontawesome::fa("laptop")` Application Exercise
+
+.box-1[[6] Create a bigger table]
+
+.box-inv-1[Go to: [https://www.danieldsjoberg.com/gtsummary](https://www.danieldsjoberg.com/gtsummary)
+
+.box-inv-1[Expand the table created to examine other variables]
+
+`r countdown::countdown(4, top = 0, margin = "10%", font_size = "2em")`
+.footer[
+Go to [bit.ly/bem-392-s22-rstudio](https://bit.ly/bem-392-s22-rstudio)
+]
+
 

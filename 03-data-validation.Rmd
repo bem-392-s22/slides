@@ -640,7 +640,7 @@ class: title title-1
 - `contains()`
 - `matches()`: Matches a regular expression.
 - `num_range()`: Matches a numerical range like x01, x02, x03.
-- `all_of()`: Matches variable names in a character vector
+- `all_of()`
 - `where()`: Applies a function to all variables and selects those for which the function returns TRUE.
 ]
 ]

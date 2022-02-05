@@ -1034,3 +1034,11 @@ class: title title-1
 - [Emily Riederer's](https://twitter.com/emilyriederer) Column Names as Contracts [[blog](https://emilyriederer.netlify.app/post/column-name-contracts/)]
 
 - [Rich Iannone's](https://twitter.com/riannone) {pointblank} Website [[package](https://rich-iannone.github.io/pointblank/)]
+
+---
+
+class: title title-1
+
+.box-1[Design Principles for Your Project [Part 3]]
+
+.box-1[Complete Module 2 Check In]

@@ -79,7 +79,7 @@ class: title title-1
 |ID|
 |IND|
 |YN|
-|RANK|
+|VAL|
 |CAT|
 |DT|
 |TM|
@@ -98,7 +98,7 @@ class: title title-1
 |ID| Unique identifier
 |IND| Binary 0/1 indicator; rest of name describes condition 1
 |YN| YES/NO variable
-|RANK| Rank 1-5
+|VAL| Numeric 
 |CAT| Human-readable categorical variable
 |DT| Date of an event
 |TM| Timestamp of event
@@ -167,6 +167,7 @@ class: title title-1
 |R2D2|
 ]
 ]
+.footer[Emily Riederer. Column names as contracts https://emilyriederer.netlify.app/talk/col-names-contract/slides.pdf]
 
 ---
 
@@ -180,6 +181,7 @@ class: title title-1
 `VAL_RANK_{EPISODE_1 | EPISODE_2 | EPISODE_3 | EPISODE_4}`  
 `IND_DEMOGRAPHIC_FEMALE`
 `CAT_DEMOGRAPHIC_AGE`
+.footer[Emily Riederer. Column names as contracts https://emilyriederer.netlify.app/talk/col-names-contract/slides.pdf]
 
 ---
 
@@ -218,7 +220,7 @@ Go to [bit.ly/bem-392-s22-rstudio](https://bit.ly/bem-392-s22-rstudio)
 .box-1[Is age continuous? or binned?]
 .box-1[Find the file where the data is cleaned and open it.]
 
-<div class="countdown" id="timer_61fef9c5" style="top:0;right:0;margin:5%;font-size:1em;" data-warnwhen="0">
+<div class="countdown" id="timer_61ff2fa7" style="top:0;right:0;margin:5%;font-size:1em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">04</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 ---
@@ -575,7 +577,7 @@ class: title title-1
 
 .box-1[Add new variable to the data dictionary in the README]
 
-<div class="countdown" id="timer_61fef9cf" style="top:0;right:0;margin:5%;font-size:1em;" data-warnwhen="0">
+<div class="countdown" id="timer_61ff2ce1" style="top:0;right:0;margin:5%;font-size:1em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">08</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -1322,7 +1324,7 @@ html {
       <th colspan="14" class="gt_heading gt_title gt_font_normal" style="color: #444444; font-size: 28px; text-align: left; font-weight: 500;">Pointblank Validation</th>
     </tr>
     <tr>
-      <th colspan="14" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="font-size: 12px; text-align: left;"><span style="text-decoration-style:solid;text-decoration-color:#ADD8E6;text-decoration-line:underline;text-underline-position:under;color:#333333;font-variant-numeric:tabular-nums;padding-left:4px;margin-right:5px;padding-right:2px;">[2022-02-05|17:13:01]</span></p>
+      <th colspan="14" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="font-size: 12px; text-align: left;"><span style="text-decoration-style:solid;text-decoration-color:#ADD8E6;text-decoration-line:underline;text-underline-position:under;color:#333333;font-variant-numeric:tabular-nums;padding-left:4px;margin-right:5px;padding-right:2px;">[2022-02-05|21:03:37]</span></p>
 <div style="height:25px;"><span style="background-color: #F1D35A;color: #222222;padding: 0.5em 0.5em;position: inherit;text-transform: uppercase;margin: 5px 1px 5px 4px;font-weight: bold;border: solid 1px #F1D35A;padding: 2px 10px 2px 10px;font-size: smaller;">tibble</span></div>
 </th>
     </tr>
@@ -2138,9 +2140,9 @@ html {
   </tbody>
   <tfoot class="gt_sourcenotes">
     <tr>
-      <td class="gt_sourcenote" colspan="14"><span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin-left:10px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;padding:2px 10px 2px 10px;">2022-02-05 17:13:01 EST</span>
-<span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;margin:5px 1px 5px 0;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;">2.4 s</span>
-<span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin:5px 1px 5px -1px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;">2022-02-05 17:13:03 EST</span></td>
+      <td class="gt_sourcenote" colspan="14"><span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin-left:10px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;padding:2px 10px 2px 10px;">2022-02-05 21:03:37 EST</span>
+<span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;margin:5px 1px 5px 0;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;">&lt; 1 s</span>
+<span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin:5px 1px 5px -1px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;">2022-02-05 21:03:38 EST</span></td>
     </tr>
   </tfoot>
   
@@ -2548,7 +2550,7 @@ html {
       <th colspan="14" class="gt_heading gt_title gt_font_normal" style="color: #444444; font-size: 28px; text-align: left; font-weight: 500;">Pointblank Validation</th>
     </tr>
     <tr>
-      <th colspan="14" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="font-size: 12px; text-align: left;"><span style="text-decoration-style:solid;text-decoration-color:#ADD8E6;text-decoration-line:underline;text-underline-position:under;color:#333333;font-variant-numeric:tabular-nums;padding-left:4px;margin-right:5px;padding-right:2px;">[2022-02-05|17:13:07]</span></p>
+      <th colspan="14" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="font-size: 12px; text-align: left;"><span style="text-decoration-style:solid;text-decoration-color:#ADD8E6;text-decoration-line:underline;text-underline-position:under;color:#333333;font-variant-numeric:tabular-nums;padding-left:4px;margin-right:5px;padding-right:2px;">[2022-02-05|21:03:39]</span></p>
 <div style="height:25px;"><span style="background-color: #F1D35A;color: #222222;padding: 0.5em 0.5em;position: inherit;text-transform: uppercase;margin: 5px 1px 5px 4px;font-weight: bold;border: solid 1px #F1D35A;padding: 2px 10px 2px 10px;font-size: smaller;">tibble</span></div>
 </th>
     </tr>
@@ -2607,9 +2609,9 @@ html {
   </tbody>
   <tfoot class="gt_sourcenotes">
     <tr>
-      <td class="gt_sourcenote" colspan="14"><span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin-left:10px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;padding:2px 10px 2px 10px;">2022-02-05 17:13:07 EST</span>
+      <td class="gt_sourcenote" colspan="14"><span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin-left:10px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;padding:2px 10px 2px 10px;">2022-02-05 21:03:39 EST</span>
 <span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;margin:5px 1px 5px 0;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;">&lt; 1 s</span>
-<span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin:5px 1px 5px -1px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;">2022-02-05 17:13:07 EST</span></td>
+<span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin:5px 1px 5px -1px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;">2022-02-05 21:03:39 EST</span></td>
     </tr>
   </tfoot>
   
@@ -3018,7 +3020,7 @@ html {
       <th colspan="14" class="gt_heading gt_title gt_font_normal" style="color: #444444; font-size: 28px; text-align: left; font-weight: 500;">Pointblank Validation</th>
     </tr>
     <tr>
-      <th colspan="14" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="font-size: 12px; text-align: left;"><span style="text-decoration-style:solid;text-decoration-color:#ADD8E6;text-decoration-line:underline;text-underline-position:under;color:#333333;font-variant-numeric:tabular-nums;padding-left:4px;margin-right:5px;padding-right:2px;">[2022-02-05|17:13:09]</span></p>
+      <th colspan="14" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="font-size: 12px; text-align: left;"><span style="text-decoration-style:solid;text-decoration-color:#ADD8E6;text-decoration-line:underline;text-underline-position:under;color:#333333;font-variant-numeric:tabular-nums;padding-left:4px;margin-right:5px;padding-right:2px;">[2022-02-05|21:03:40]</span></p>
 <div style="height:25px;"><span style="background-color: #F1D35A;color: #222222;padding: 0.5em 0.5em;position: inherit;text-transform: uppercase;margin: 5px 1px 5px 4px;font-weight: bold;border: solid 1px #F1D35A;padding: 2px 10px 2px 10px;font-size: smaller;">tibble</span><span style="background-color:#E5AB00;color:white;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin:5px 0px 5px 5px;font-weight:bold;border:solid 1px #E5AB00;padding:2px 15px 2px 15px;font-size:smaller;">WARN</span>
 <span style="background-color:none;color:#333333;padding:0.5em 0.5em;position:inherit;margin:5px 0px 5px -4px;font-weight:bold;border:solid 1px #E5AB00;padding:2px 15px 2px 15px;font-size:smaller;">0.10</span>
 <span style="background-color:#D0182F;color:white;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin:5px 0px 5px 1px;font-weight:bold;border:solid 1px #D0182F;padding:2px 15px 2px 15px;font-size:smaller;">STOP</span>
@@ -3082,9 +3084,9 @@ html {
   </tbody>
   <tfoot class="gt_sourcenotes">
     <tr>
-      <td class="gt_sourcenote" colspan="14"><span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin-left:10px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;padding:2px 10px 2px 10px;">2022-02-05 17:13:09 EST</span>
+      <td class="gt_sourcenote" colspan="14"><span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin-left:10px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;padding:2px 10px 2px 10px;">2022-02-05 21:03:40 EST</span>
 <span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;margin:5px 1px 5px 0;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;">&lt; 1 s</span>
-<span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin:5px 1px 5px -1px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;">2022-02-05 17:13:09 EST</span></td>
+<span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin:5px 1px 5px -1px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;">2022-02-05 21:03:40 EST</span></td>
     </tr>
   </tfoot>
   
@@ -3496,7 +3498,7 @@ html {
       <th colspan="14" class="gt_heading gt_title gt_font_normal" style="color: #444444; font-size: 28px; text-align: left; font-weight: 500;">Pointblank Validation</th>
     </tr>
     <tr>
-      <th colspan="14" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="font-size: 12px; text-align: left;"><span style="text-decoration-style:solid;text-decoration-color:#ADD8E6;text-decoration-line:underline;text-underline-position:under;color:#333333;font-variant-numeric:tabular-nums;padding-left:4px;margin-right:5px;padding-right:2px;">[2022-02-05|17:13:11]</span></p>
+      <th colspan="14" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="font-size: 12px; text-align: left;"><span style="text-decoration-style:solid;text-decoration-color:#ADD8E6;text-decoration-line:underline;text-underline-position:under;color:#333333;font-variant-numeric:tabular-nums;padding-left:4px;margin-right:5px;padding-right:2px;">[2022-02-05|21:03:40]</span></p>
 <div style="height:25px;"><span style="background-color: #F1D35A;color: #222222;padding: 0.5em 0.5em;position: inherit;text-transform: uppercase;margin: 5px 1px 5px 4px;font-weight: bold;border: solid 1px #F1D35A;padding: 2px 10px 2px 10px;font-size: smaller;">tibble</span><span style="background-color:#E5AB00;color:white;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin:5px 0px 5px 5px;font-weight:bold;border:solid 1px #E5AB00;padding:2px 15px 2px 15px;font-size:smaller;">WARN</span>
 <span style="background-color:none;color:#333333;padding:0.5em 0.5em;position:inherit;margin:5px 0px 5px -4px;font-weight:bold;border:solid 1px #E5AB00;padding:2px 15px 2px 15px;font-size:smaller;">0.10</span>
 <span style="background-color:#D0182F;color:white;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin:5px 0px 5px 1px;font-weight:bold;border:solid 1px #D0182F;padding:2px 15px 2px 15px;font-size:smaller;">STOP</span>
@@ -3558,9 +3560,9 @@ html {
   </tbody>
   <tfoot class="gt_sourcenotes">
     <tr>
-      <td class="gt_sourcenote" colspan="14"><span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin-left:10px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;padding:2px 10px 2px 10px;">2022-02-05 17:13:11 EST</span>
+      <td class="gt_sourcenote" colspan="14"><span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin-left:10px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;padding:2px 10px 2px 10px;">2022-02-05 21:03:40 EST</span>
 <span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;margin:5px 1px 5px 0;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;">&lt; 1 s</span>
-<span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin:5px 1px 5px -1px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;">2022-02-05 17:13:12 EST</span></td>
+<span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin:5px 1px 5px -1px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;">2022-02-05 21:03:40 EST</span></td>
     </tr>
   </tfoot>
   
@@ -3585,7 +3587,7 @@ class: title title-1
 
 .box-1[All "FAVOR" variables have the right categories]
 
-<div class="countdown" id="timer_61fef692" style="top:0;right:0;margin:5%;font-size:1em;" data-warnwhen="0">
+<div class="countdown" id="timer_61ff2fbb" style="top:0;right:0;margin:5%;font-size:1em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -3602,6 +3604,8 @@ class: title title-1
 ---
 
 class: title title-1
+
+# Reminders
 
 .box-1[Design Principles for Your Project [Part 3]]
 

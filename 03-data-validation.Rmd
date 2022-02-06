@@ -86,7 +86,7 @@ class: title title-1
 |ID|
 |IND|
 |YN|
-|RANK|
+|VAL|
 |CAT|
 |DT|
 |TM|
@@ -105,7 +105,7 @@ class: title title-1
 |ID| Unique identifier
 |IND| Binary 0/1 indicator; rest of name describes condition 1
 |YN| YES/NO variable
-|RANK| Rank 1-5
+|VAL| Numeric 
 |CAT| Human-readable categorical variable
 |DT| Date of an event
 |TM| Timestamp of event
@@ -174,6 +174,7 @@ class: title title-1
 |R2D2|
 ]
 ]
+.footer[Emily Riederer. Column names as contracts https://emilyriederer.netlify.app/talk/col-names-contract/slides.pdf]
 
 ---
 
@@ -187,6 +188,7 @@ class: title title-1
 `VAL_RANK_{EPISODE_1 | EPISODE_2 | EPISODE_3 | EPISODE_4}`  
 `IND_DEMOGRAPHIC_FEMALE`
 `CAT_DEMOGRAPHIC_AGE`
+.footer[Emily Riederer. Column names as contracts https://emilyriederer.netlify.app/talk/col-names-contract/slides.pdf]
 
 ---
 
@@ -1038,6 +1040,8 @@ class: title title-1
 ---
 
 class: title title-1
+
+# Reminders
 
 .box-1[Design Principles for Your Project [Part 3]]
 

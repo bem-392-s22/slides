@@ -528,7 +528,7 @@ class: title title-1
 
 ```{r, eval = FALSE}
 ggplot(young_starwars_survey, 
-       aes(x = VAL_RANK_EPISODE_1, y = VAL_RANK_EPISODE_1)) + 
+       aes(x = VAL_RANK_EPISODE_1, y = CAT_FAVOR_PADME)) + 
   labs(x = "------",
        y = "------")
 ```
@@ -835,7 +835,7 @@ class: title title-1
 
 # `r fontawesome::fa("laptop")` Application Exercise
 
-.box-1[Plot `VAL_RANK_EPISODE_1` by `YN_FAN_STARWARS`]
+.box-1[Plot `VAL_RANK_EPISODE_1` by `CAT_FAVOR_PADME` among young survey respondents]
 
 ```{r, echo = FALSE, fig.height = 4}
 d <- read_csv("data/starwars_survey.csv")
@@ -1064,7 +1064,48 @@ tibble(film = unlist(starwars$films)) %>%
 ```
 
 ---
+class: title title-1
 
+# forcats $\in$ tidyverse
+
+.pull-left[
+
+.small[
+```{r, eval = FALSE}
+young_starwars_survey %>%
+  mutate(
+    CAT_FAVOR_PADME_ORDER = 
+      fct_infreq(CAT_FAVOR_PADME)
+    ) 
+```
+]
+]
+
+.pull-right[
+- `fct_relevel()` relevel fators
+- `fct_rev()` reverse factor
+- `fct_infreq()` order by the number of observations in each level
+- `fct_inorder()` order by the order in which they first appear in the dataset
+]
+---
+class: title title-1
+
+# `r fontawesome::fa("laptop")` Application Exercise
+
+.box-1[Copy the code below to create a bar plot]
+
+
+```{r, eval = FALSE}
+ggplot(young_starwars_survey, 
+       aes(x = CAT_FAVOR_PADME)) +
+  geom_bar() + 
+  coord_flip() + 
+  labs(y = "------")
+```
+
+.box-1[Use the `fct_relevel()` function to properly order the bars by the favorability order]
+`r countdown::countdown(4, top = 0, font_size = "1em", margin = "5%")`
+---
 class: title title-1
 
 # Good visualizations
@@ -1101,6 +1142,43 @@ starwars %>%
         axis.ticks.x = element_blank(),
         axis.text.y = element_text(size = 20))
 ```
+
+---
+
+class: title title-1
+
+# `r fontawesome::fa("laptop")` Application Exercise
+
+.box-1[Create a new variable `CAT_RANK_EPISODE_1` that categorizes the `VAL_RANK_EPISODE_1` to "< 5" or "5+"]
+
+.box-1[Create a new variable `COLOR` that is "blue" if `CAT_FAVOR_PADME` is "Unfamiliar (N/A)" or "red" otherwise]
+
+.box-1[Try to recreate the figure below.]
+
+```{r, echo = FALSE}
+d %>%
+  filter(CAT_DEMOGRAPHIC_AGE == "18-29", !is.na(CAT_FAVOR_PADME)) %>%
+  mutate(CAT_RANK_EPISODE_1 = case_when(
+    VAL_RANK_EPISODE_1 < 5 ~ "Episode 1 ranking < 5",
+    TRUE ~ "Episode 1 ranking 5+" 
+  ),
+  PAD = fct_relevel(CAT_FAVOR_PADME, 
+                    c("Very favorably", "Somewhat favorably",  "Neither favorably nor unfavorably (neutral)", "Somewhat unfavorably", "Very unfavorably", "Unfamiliar (N/A)")),
+  color_pad = case_when(
+    PAD == "Unfamiliar (N/A)" ~ "red",
+    TRUE ~ "blue"
+  )) %>%
+ggplot(aes(x = PAD, fill = color_pad)) +
+  geom_bar() + 
+  coord_flip() + 
+  labs(y = "Padme Favorability",
+       x = "Count") + 
+  facet_wrap(~CAT_RANK_EPISODE_1) + 
+  theme(legend.position = "none") 
+```
+
+.box-1[Use the `fct_relevel()` function to properly order the bars by the favorability order]
+`r countdown::countdown(4, top = 0, font_size = "1em", margin = "5%")`
 
 ---
 class: title title-1

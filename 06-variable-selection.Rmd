@@ -44,6 +44,10 @@ Lucy D'Agostino McGowan
 ]
 
 ---
+class: section-title section-title-1 center middle
+
+# bit.ly/bem-392-s22-rstudio
+---
 class: center, middle
 <img src="img/05-statistical-modeling-refresher.png" height="600"></img>
 ---
@@ -906,7 +910,10 @@ class: title title-1
 `r countdown::countdown(5)`
 
 ---
+class: section-title section-title-1 center middle
 
+# bit.ly/bem-392-s22-hw
+---
 class: section-title section-title-1 center middle
 
 # Prediction

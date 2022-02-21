@@ -46,6 +46,11 @@ Lucy D'Agostino McGowan
 ---
 class: section-title section-title-1 center middle
 
+# bit.ly/bem-392-s22-slides-6
+---
+
+class: section-title section-title-1 center middle
+
 # bit.ly/bem-392-s22-rstudio
 ---
 class: center, middle

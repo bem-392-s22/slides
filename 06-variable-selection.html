@@ -4,7 +4,7 @@
     <title>Variable Selection</title>
     <meta charset="utf-8" />
     <meta name="author" content="Lucy D’Agostino McGowan" />
-    <meta name="date" content="2022-02-21" />
+    <meta name="date" content="2022-02-22" />
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
@@ -334,7 +334,7 @@ class: title title-1
 
 .box-1[Choose at least 5 variables to predict `VAL_RANK_EPISODE_1`. Use the `varclus` function to see how the variables cluster]
 
-<div class="countdown" id="timer_6213a336" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62154204" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">08</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -621,7 +621,7 @@ class: title title-1
 
 .box-1[Use the `redun` function to see if any variables are redundant with an R2 of 0.75]
 
-<div class="countdown" id="timer_6213a223" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_621540ff" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -748,7 +748,7 @@ class: title title-1
 
 .box-1[Plot this. If you had to choose, which would you include?]
 
-<div class="countdown" id="timer_6213a28f" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_621540c1" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -931,7 +931,7 @@ class: title title-1
 
 .box-1[Using the `rmse` function calculation the root-mean-squared-error for this model]
 
-<div class="countdown" id="timer_6213a4fd" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_621540ef" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 ---
@@ -944,14 +944,10 @@ class: title title-1
 
 .box-1[Now that we've selected our variables, update the model under the ##Linear Regression section to include these variables]
 
-<div class="countdown" id="timer_6213a4ba" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62153ef4" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
----
-class: section-title section-title-1 center middle
-
-# bit.ly/bem-392-s22-hw
 ---
 class: section-title section-title-1 center middle
 
@@ -984,10 +980,9 @@ class: title title-1
 &lt;img src="06-variable-selection_files/figure-html/unnamed-chunk-42-1.png" width="504" style="display: block; margin: auto;" /&gt;
 
 .box-1[
-I have some `train` data, plotted above. What `\(\hat{f}(x)\)` would minimize the `\(MSE_{\texttt{train}}\)`?
+I have some `train` data, plotted above. What function might minimize the `\(RMSE_{\texttt{train}}\)`?
 ]
 
-`$$MSE_{\texttt{train}} = \textrm{Ave}_{i\in\texttt{train}}[y_i-\hat{f}(x_i)]^2$$`
 
 ---
 class: title title-1
@@ -997,10 +992,9 @@ class: title title-1
 &lt;img src="06-variable-selection_files/figure-html/unnamed-chunk-43-1.png" width="504" style="display: block; margin: auto;" /&gt;
 
 .box-1[
-I have some `train` data, plotted above. What `\(\hat{f}(x)\)` would minimize the `\(MSE_{\texttt{train}}\)`?
+I have some `train` data, plotted above. What function might minimize the `\(RMSE_{\texttt{train}}\)`?
 ]
 
-`$$MSE_{\texttt{train}} = \textrm{Ave}_{i\in\texttt{train}}[y_i-\hat{f}(x_i)]^2$$`
 
 ---
 class: title title-1
@@ -1035,7 +1029,7 @@ class: title title-1
 
 --
 
-.box-1[Instead of measuring **accuracy** as the average squared prediction error over that `train` data, we can compute it using fresh `test` data]
+.box-1[Instead of measuring **accuracy** as the RMSE over that `train` data, we can compute it using fresh `test` data]
 
 ---
 class: title title-1
@@ -1115,7 +1109,7 @@ If we have a **quantitative predictor** what metric would we use to calculate th
 
 --
 
-.box-1[Often we use Mean Squared Error (MSE)]
+.box-1[Often we use Root Mean Squared Error (RMSE)]
 
 ---
 
@@ -1127,13 +1121,6 @@ class: title title-1
 
 .box-1[Fit the model on the **training set**, calculate the prediction error on the **validation set**]
 
-.box-1[
-If we have a **qualitative predictor** (classification) what metric would we use to calculate this test error?
-]
-
---
-
-.box-1[Often we use misclassification rate]
 
 ---
 class: title title-1
@@ -1147,7 +1134,7 @@ class: title title-1
 --
 &lt;br&gt;
 .box-1.medium[
-Calculate the MSE in just the test portions
+Calculate the RMSE in just the test portions
 ]
 
 
@@ -1175,7 +1162,7 @@ class: title title-1
 &lt;img src="06-variable-selection_files/figure-html/unnamed-chunk-50-1.png" width="720" style="display: block; margin: auto;" /&gt;
 
 .right[
-`\(\color{orange}{MSE_{\texttt{test-split}}}\)`
+`\(\color{orange}{RMSE_{\texttt{test-split}}}\)`
 ]
 
 --
@@ -1184,7 +1171,7 @@ class: title title-1
 
 
 .right[
-`\(\color{orange}{MSE_{\texttt{test-split}}}\)`
+`\(\color{orange}{RMSE_{\texttt{test-split}}}\)`
 ]
 
 --
@@ -1192,7 +1179,7 @@ class: title title-1
 &lt;img src="06-variable-selection_files/figure-html/unnamed-chunk-52-1.png" width="720" style="display: block; margin: auto;" /&gt;
 
 .right[
-`\(\color{orange}{MSE_{\texttt{test-split}}}\)`
+`\(\color{orange}{RMSE_{\texttt{test-split}}}\)`
 ]
 
 --
@@ -1200,7 +1187,7 @@ class: title title-1
 &lt;img src="06-variable-selection_files/figure-html/unnamed-chunk-53-1.png" width="720" style="display: block; margin: auto;" /&gt;
 
 .right[
-`\(\color{orange}{MSE_{\texttt{test-split}}}\)`
+`\(\color{orange}{RMSE_{\texttt{test-split}}}\)`
 ]
 
 
@@ -1255,28 +1242,28 @@ class: title title-1
 &lt;img src="06-variable-selection_files/figure-html/unnamed-chunk-55-1.png" width="720" style="display: block; margin: auto;" /&gt;
 
 .right[
-`\(\color{orange}{MSE_{\texttt{test-split-1}}}\)`
+`\(\small\color{orange}{RMSE_{\texttt{test-split-1}}}\)`
 ]
 
 --
 
 &lt;img src="06-variable-selection_files/figure-html/unnamed-chunk-56-1.png" width="720" style="display: block; margin: auto;" /&gt;
 .right[
-`\(\color{orange}{MSE_{\texttt{test-split-2}}}\)`
+`\(\small\color{orange}{RMSE_{\texttt{test-split-2}}}\)`
 ]
 
 --
 
 &lt;img src="06-variable-selection_files/figure-html/unnamed-chunk-57-1.png" width="720" style="display: block; margin: auto;" /&gt;
 .right[
-`\(\color{orange}{MSE_{\texttt{test-split-3}}}\)`
+`\(\small\color{orange}{RMSE_{\texttt{test-split-3}}}\)`
 ]
 
 --
 
 &lt;img src="06-variable-selection_files/figure-html/unnamed-chunk-58-1.png" width="720" style="display: block; margin: auto;" /&gt;
 .right[
-`\(\color{orange}{MSE_{\texttt{test-split-4}}}\)`
+`\(\small\color{orange}{RMSE_{\texttt{test-split-4}}}\)`
 ]
 
 --
@@ -1284,26 +1271,6 @@ class: title title-1
 .right[
 **Take the mean of the `\(k\)` MSE values**
 ]
-
----
-class: title title-1
-
-# Estimating prediction error (quantitative outcome)
-
-* Split the data into K parts, where `\(C_1, C_2, \dots, C_k\)` indicate the indices of observations in part `\(k\)`
-
-`$$CV_{(K)} = \sum_{k=1}^K\frac{n_k}{n}MSE_k$$`
-
---
-
-* `\(MSE_k = \sum_{i \in C_k} (y_i - \hat{y}_i)^2/n_k\)`
---
-
-* `\(n_k\)` is the number of observations in group `\(k\)`
-* `\(\hat{y}_i\)` is the fit for observation `\(i\)` obtained from the data with the part `\(k\)` removed
---
-
-* If we set `\(K = n\)`, we'd have `\(n-fold\)` cross validation which is the same as **leave-one-out cross validation** (LOOCV)
 
 ---
 class: title title-1
@@ -1334,20 +1301,6 @@ class: title title-1
 
 ---
 
-&lt;!-- ## Special Case! --&gt;
-
-&lt;!-- * With _linear_ regression, you can actually calculate the LOOCV error without having to iterate! --&gt;
-
-&lt;!-- `$$CV_{(n)} = \frac{1}{n}\sum_{i=1}^n\left(\frac{y_i-\hat{y}_i}{1-h_i}\right)^2$$` --&gt;
-
-&lt;!-- -- --&gt;
-
-&lt;!-- * `\(\hat{y}_i\)` is the `\(i\)`th fitted value from the linear model  --&gt;
-&lt;!-- -- --&gt;
-
-&lt;!-- * `\(h_i\)` is the diagonal of the "hat" matrix (remember that! 🎓) --&gt;
-
-&lt;!-- --- --&gt;
 class: title title-1
 
 # Picking `\(K\)`
@@ -1385,24 +1338,6 @@ Auto example:
 
 &lt;img src="06-variable-selection_files/figure-html/fig1-1.png" width="504" style="display: block; margin: auto;" /&gt;
 
-
-
----
-class: title title-1
-
-# Estimating prediction error (qualitative outcome)
-
-* The premise is the same as cross valiation for quantitative outcomes
-* Split the data into K parts, where `\(C_1, C_2, \dots, C_k\)` indicate the indices of observations in part `\(k\)`
-
-`$$CV_K = \sum_{k=1}^K\frac{n_k}{n}Err_k$$`
-
---
-* `\(Err_k = \sum_{i\in C_k}I(y_i\neq\hat{y}_i)/n_k\)` (missclassification rate)
-
---
-* `\(n_k\)` is the number of observations in group `\(k\)`
-* `\(\hat{y}_i\)` is the fit for observation `\(i\)` obtained from the data with the part `\(k\)` removed
 
 
 

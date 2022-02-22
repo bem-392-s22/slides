@@ -917,10 +917,6 @@ class: title title-1
 ---
 class: section-title section-title-1 center middle
 
-# bit.ly/bem-392-s22-hw
----
-class: section-title section-title-1 center middle
-
 # Prediction
 
 ---
@@ -957,10 +953,9 @@ ggplot(df, aes(x, y)) +
 ```
 
 .box-1[
-I have some `train` data, plotted above. What $\hat{f}(x)$ would minimize the $MSE_{\texttt{train}}$?
+I have some `train` data, plotted above. What function might minimize the $RMSE_{\texttt{train}}$?
 ]
 
-$$MSE_{\texttt{train}} = \textrm{Ave}_{i\in\texttt{train}}[y_i-\hat{f}(x_i)]^2$$
 
 ---
 class: title title-1
@@ -974,10 +969,9 @@ ggplot(df, aes(x, y)) +
 ```
 
 .box-1[
-I have some `train` data, plotted above. What $\hat{f}(x)$ would minimize the $MSE_{\texttt{train}}$?
+I have some `train` data, plotted above. What function might minimize the $RMSE_{\texttt{train}}$?
 ]
 
-$$MSE_{\texttt{train}} = \textrm{Ave}_{i\in\texttt{train}}[y_i-\hat{f}(x_i)]^2$$
 
 ---
 class: title title-1
@@ -1024,7 +1018,7 @@ class: title title-1
 
 --
 
-.box-1[Instead of measuring **accuracy** as the average squared prediction error over that `train` data, we can compute it using fresh `test` data]
+.box-1[Instead of measuring **accuracy** as the RMSE over that `train` data, we can compute it using fresh `test` data]
 
 ---
 class: title title-1
@@ -1104,7 +1098,7 @@ If we have a **quantitative predictor** what metric would we use to calculate th
 
 --
 
-.box-1[Often we use Mean Squared Error (MSE)]
+.box-1[Often we use Root Mean Squared Error (RMSE)]
 
 ---
 
@@ -1116,13 +1110,6 @@ class: title title-1
 
 .box-1[Fit the model on the **training set**, calculate the prediction error on the **validation set**]
 
-.box-1[
-If we have a **qualitative predictor** (classification) what metric would we use to calculate this test error?
-]
-
---
-
-.box-1[Often we use misclassification rate]
 
 ---
 class: title title-1
@@ -1155,7 +1142,7 @@ plot_split()
 --
 <br>
 .box-1.medium[
-Calculate the MSE in just the test portions
+Calculate the RMSE in just the test portions
 ]
 
 
@@ -1208,7 +1195,7 @@ plot_split()
 ```
 
 .right[
-$\color{orange}{MSE_{\texttt{test-split}}}$
+$\color{orange}{RMSE_{\texttt{test-split}}}$
 ]
 
 --
@@ -1219,7 +1206,7 @@ plot_split()
 
 
 .right[
-$\color{orange}{MSE_{\texttt{test-split}}}$
+$\color{orange}{RMSE_{\texttt{test-split}}}$
 ]
 
 --
@@ -1229,7 +1216,7 @@ plot_split()
 ```
 
 .right[
-$\color{orange}{MSE_{\texttt{test-split}}}$
+$\color{orange}{RMSE_{\texttt{test-split}}}$
 ]
 
 --
@@ -1239,7 +1226,7 @@ plot_split()
 ```
 
 .right[
-$\color{orange}{MSE_{\texttt{test-split}}}$
+$\color{orange}{RMSE_{\texttt{test-split}}}$
 ]
 
 
@@ -1306,7 +1293,7 @@ plot_split(data = c(rep("Train", 15), rep("Test", 5)))
 ```
 
 .right[
-$\color{orange}{MSE_{\texttt{test-split-1}}}$
+$\small\color{orange}{RMSE_{\texttt{test-split-1}}}$
 ]
 
 --
@@ -1315,7 +1302,7 @@ $\color{orange}{MSE_{\texttt{test-split-1}}}$
 plot_split(data = c(rep("Train", 10), rep("Test", 5), rep("Train", 5)))
 ```
 .right[
-$\color{orange}{MSE_{\texttt{test-split-2}}}$
+$\small\color{orange}{RMSE_{\texttt{test-split-2}}}$
 ]
 
 --
@@ -1324,7 +1311,7 @@ $\color{orange}{MSE_{\texttt{test-split-2}}}$
 plot_split(data = c(rep("Train", 5), rep("Test", 5), rep("Train", 10)))
 ```
 .right[
-$\color{orange}{MSE_{\texttt{test-split-3}}}$
+$\small\color{orange}{RMSE_{\texttt{test-split-3}}}$
 ]
 
 --
@@ -1333,7 +1320,7 @@ $\color{orange}{MSE_{\texttt{test-split-3}}}$
 plot_split(data = c(rep("Test", 5), rep("Train", 15)))
 ```
 .right[
-$\color{orange}{MSE_{\texttt{test-split-4}}}$
+$\small\color{orange}{RMSE_{\texttt{test-split-4}}}$
 ]
 
 --
@@ -1341,26 +1328,6 @@ $\color{orange}{MSE_{\texttt{test-split-4}}}$
 .right[
 **Take the mean of the $k$ MSE values**
 ]
-
----
-class: title title-1
-
-# Estimating prediction error (quantitative outcome)
-
-* Split the data into K parts, where $C_1, C_2, \dots, C_k$ indicate the indices of observations in part $k$
-
-$$CV_{(K)} = \sum_{k=1}^K\frac{n_k}{n}MSE_k$$
-
---
-
-* $MSE_k = \sum_{i \in C_k} (y_i - \hat{y}_i)^2/n_k$
---
-
-* $n_k$ is the number of observations in group $k$
-* $\hat{y}_i$ is the fit for observation $i$ obtained from the data with the part $k$ removed
---
-
-* If we set $K = n$, we'd have $n-fold$ cross validation which is the same as **leave-one-out cross validation** (LOOCV)
 
 ---
 class: title title-1
@@ -1409,20 +1376,6 @@ plot_split(data = c(rep("Test", 1), rep("Train", 19)))
 
 ---
 
-<!-- ## Special Case! -->
-
-<!-- * With _linear_ regression, you can actually calculate the LOOCV error without having to iterate! -->
-
-<!-- $$CV_{(n)} = \frac{1}{n}\sum_{i=1}^n\left(\frac{y_i-\hat{y}_i}{1-h_i}\right)^2$$ -->
-
-<!-- -- -->
-
-<!-- * $\hat{y}_i$ is the $i$th fitted value from the linear model  -->
-<!-- -- -->
-
-<!-- * $h_i$ is the diagonal of the "hat" matrix (remember that! `r emo::ji("hat")`) -->
-
-<!-- --- -->
 class: title title-1
 
 # Picking $K$
@@ -1502,24 +1455,6 @@ ggplot(d2, aes(x = x, y = cv_10, group = group, color = group)) +
 grid.arrange(p1, p2, ncol = 2)
 ```
 
-
-
----
-class: title title-1
-
-# Estimating prediction error (qualitative outcome)
-
-* The premise is the same as cross valiation for quantitative outcomes
-* Split the data into K parts, where $C_1, C_2, \dots, C_k$ indicate the indices of observations in part $k$
-
-$$CV_K = \sum_{k=1}^K\frac{n_k}{n}Err_k$$
-
---
-* $Err_k = \sum_{i\in C_k}I(y_i\neq\hat{y}_i)/n_k$ (missclassification rate)
-
---
-* $n_k$ is the number of observations in group $k$
-* $\hat{y}_i$ is the fit for observation $i$ obtained from the data with the part $k$ removed
 
 
 

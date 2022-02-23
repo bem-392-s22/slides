@@ -44,10 +44,14 @@ Lucy D'Agostino McGowan
 ]
 
 ---
-
 class: section-title-1 section-title middle
 
-# https://istats.shinyapps.io/ExploreCoverage/
+# bit.ly/bem-392-s22-slides-7
+
+---
+class: section-title-1 section-title middle
+
+## https://istats.shinyapps.io/ExploreCoverage/
 
 ---
 
